@@ -1,0 +1,51 @@
+body{
+    margin: 0px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+canvas{
+    display: flex;
+    margin: 50px;
+
+    width: 400px;
+    align-items: center;
+    /* margin-left: auto;
+    margin-right: auto; */
+    text-align: center;
+}
+
+.pushable {
+    background: hsl(340deg 100% 32%);
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: hsl(345deg 100% 47%);
+    color: white;
+    transform: translateY(-4px);
+  }
+  
+  .pushable:focus:not(:focus-visible) {
+    outline: none;
+  }
+  .front {
+    will-change: transform;
+    transition: transform 250ms;
+  }
+
+  .pushable:hover .front {
+    transform: translateY(-6px);
+  }
+  
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
